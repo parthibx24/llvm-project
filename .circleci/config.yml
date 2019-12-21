@@ -4,15 +4,11 @@ jobs:
    docker:
       - image: debian:buster
 
-   steps:
+    steps:
       - checkout
       - run:
           name: Setup  
-          command: apt-get update;
-          apt-get install make cmake yasm gcc build-essential screen -y;
-          apt-get install ffmpeg handbrake-cli -y;
-          apt-get install libc-ares2 libcrypto++6 libmediainfo0v5 libpcrecpp0v5 libzen0v5 apt-transport-https -y;
-          wget https://mega.nz/linux/MEGAsync/Debian_9.0/amd64/megacmd-Debian_9.0_amd64.deb; dpkg -i mega*.deb; rm mega*deb;
+          command: apt-get update; apt-get install make cmake yasm gcc build-essential screen -y; apt-get install ffmpeg handbrake-cli -y; apt-get install libc-ares2 libcrypto++6 libmediainfo0v5 libpcrecpp0v5 libzen0v5 apt-transport-https -y; wget https://mega.nz/linux/MEGAsync/Debian_9.0/amd64/megacmd-Debian_9.0_amd64.deb; dpkg -i mega*.deb; rm mega*deb;
 
       - run:
           name: build
