@@ -1,7 +1,11 @@
 version: 2
 jobs:
   build:
-    docker:
+   filters:
+      branches:
+        only:
+          - develop
+   docker:
       - image: debian:buster
     steps:
       - checkout
