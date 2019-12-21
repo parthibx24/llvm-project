@@ -1,9 +1,8 @@
 version: 2
 jobs:
   build:
-   docker:
+    docker:
       - image: debian:buster
-
     steps:
       - checkout
       - run:
