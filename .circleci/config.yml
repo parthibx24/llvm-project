@@ -1,13 +1,10 @@
 version: 2
 jobs:
   build:
-   filters:
-      branches:
-        only:
-          - develop
    docker:
       - image: debian:buster
-    steps:
+
+   steps:
       - checkout
       - run:
           name: Setup  
